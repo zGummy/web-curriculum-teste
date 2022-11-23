@@ -1,0 +1,42 @@
+*{
+    margin :0;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    
+}
+header {    
+    text-align: center;
+    color: white;
+    background-color: black;
+    width: 100%;
+    padding: 10px;
+    margin: 0 ;
+    border: 1px solid black;
+}
+
+a{
+    padding: 3%;
+}
+
+h1{
+    color: rgb(75, 70, 70);
+}
+
+main {
+    background-color: rgb(187, 181, 181);
+    border: 1px solid black;
+    padding: 0% 3%;
+    width: 60%;
+    margin: 0 auto;
+    background-size: cover;
+    background-image: url("../images/bg1.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+img{
+    padding: 1px;
+    width: 175px;
+    position: relative;
+    border-radius: 10px;
+    
+}
