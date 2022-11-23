@@ -1,0 +1,8 @@
+body {
+    background-image: url("../images/background.jpg");
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    text-align: justify;
+    font-size: 150%;
+    margin-top: 5%;
+    margin-left: 5%;
+}

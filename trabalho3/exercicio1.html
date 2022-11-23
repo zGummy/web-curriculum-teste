@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <title>Exercicio 1</title>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/exercicio1.css">
+</head>
+
+<body>
+    <br>
+    <h1>A FACOM</h1>
+    <p>A Faculdade de Computação (FACOM) da Universidade Federal de Uberlândia foi criada em 2000,
+        a partir do extinto Departamento de Informática (DEINF), criado em 1988, no âmbito do CETEC.
+    </p>
+    <p></p>
+    <p>No ínicio dos anos 2000 foi criado na Faculdade o Programa de Pós-Graduação em Ciência da Computação.
+    </p>
+
+    <!-- Botão para abrir o Modal -->
+    <button id="myBtn">Abrir Modal</button>
+
+    <!-- Div Modal -->
+    <div id="myModal" class="modal">
+
+        <!-- Conteúdo Modal -->
+        <div class="modal-content">
+
+            <p>Olá Seja Bem Vindo!</p>
+            <button class="close">OK</button>
+        </div>
+
+    </div>
+
+    <script>
+
+        // Cria o modal
+        var modal = document.getElementById("myModal");
+
+        // cria o botão que abre o Modal
+        var btn = document.getElementById("myBtn");
+
+        // cria o <button (OK)> que fecha o Modal
+        var OK = document.getElementsByClassName("close")[0];
+
+        //Quando o Usuário clicar "Abrir Modal", abra o modal
+        btn.onclick = function () {
+            modal.style.display = "block";
+        }
+
+        // Quando o Usuário clicar no botão OK, feche o Modal
+        OK.onclick = function () {
+            modal.style.display = "none";
+        }
+
+
+    </script>
+</body>
+
+</html>

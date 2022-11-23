@@ -1,0 +1,28 @@
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 150%;
+    margin-top: 20%;
+    margin-left: 35%;
+}
+
+li {
+    background-color: rgb(180, 180, 199);
+    width: 85%;
+    border-radius: 5px;
+    padding: 5px;
+    margin-bottom: 5px;
+}
+
+li>button {
+    color: red;
+    float: right;
+    border: none;
+    cursor: pointer;
+    background-color: rgb(180, 180, 199);
+}
+
+div {
+    width: 40%;
+    padding: 5px;
+    background-color: lightgray;
+}

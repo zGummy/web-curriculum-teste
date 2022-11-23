@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8">
+    <title>Formulário</title>
+    <link rel="stylesheet" href="css/formulario.css">
+</head>
+
+<header>
+    <h1>Formulário</h1>
+</header>
+
+<nav>
+    <a href="index.html">Voltar a página anterior</a>
+</nav>
+
+<hr>
+<form method="post">
+    <!--Dados pessoais-->
+    <section>
+        <fieldset>
+            <legend>
+                <h2>Dados pessoais</h2>
+            </legend>
+
+            <label for="nome">Nome:</label><br>
+            <input type="text" id="nome" name="nome" minlength="4" required>
+            <span></span>
+            <br>
+            <label for="email">E-mail: </label><br>
+            <input type="email" id="email" name="email" required>
+            <span></span>
+            <br>
+            <label for="idade">Idade: </label><br>
+            <input type="number" id="idade" name="idade" required>
+            <br>
+            <label for="telefone">Telefone: </label><br>
+            <input type="tel" id="telefone" name="telefone" minlength="11" required
+                placeholder="Exemplo : 01 34567 8910">
+            <span></span>
+            <br>
+            <label for="dataNasc">Data de nascimento: </label><br>
+            <input type="date" id="dataNasc" name="dataNasc">
+            <br>
+            <label for="sexo">Sexo:</label><br>
+            <input type="text" id="sexo" name="sexo">
+
+            <br>
+            <label for="estadoCivil">Estado civil: </label><br>
+            <input type="text" id="estadoCivil" name="estadoCivil">
+        </fieldset>
+    </section>
+
+    <!--Dados da empresa-->
+    <section>
+        <fieldset>
+            <legend>
+                <h2>Dados da empresa</h2>
+            </legend>
+
+            <label for="cnpj">CNPJ: </label><br>
+            <input type="text" id="cnpj" name="cnpj">
+            <br>
+            <label for="razaoSocial">Razão Social: </label><br>
+            <input type="text" id="razaoSocial" name="razaoSocial">
+            <br>
+            <label for="ramoAtuacao">Ramo de atuação: </label><br>
+            <input type="text" id="ramoAtuacao" name="ramoAtuacao">
+        </fieldset>
+    </section>
+
+    <!--Endereco-->
+    <section>
+        <fieldset>
+            <legend>
+                <h2>Endereço</h2>
+            </legend>
+            <label for="cep">CEP: </label><br>
+            <input type="text" id="cep" name="cep" pattern="\d{5}\-\d{3}" required><br>
+            <!--Cep exemplo: 01234-567, no caso 5 números, depois 3 após o dígito-->
+            <span></span>
+
+            <label for="logradouro">Logradouro: </label><br>
+            <select name="tipologradouro" required>
+                <!--Opção vazia-->
+                <option value="">None</option>
+                <option value="rua">Rua</option>
+                <option value="avenida">Avenida</option>
+                <option value="apartamento">Apartamento</option>
+                <option value="preca">Praça</option>
+                <option value="beco">Beco</option>
+            </select>
+            <input type="text" id="logradouro" name="logradouro" required><br>
+
+            <label for="cidade">Cidade: </label><br>
+            <input type="text" id="cidade" name="cidade" required><br>
+
+            <label for="estado">Estado: </label><br>
+            <input type="text" id="estado" name="estado" required>
+        </fieldset>
+    </section>
+
+    <!--Interesse - Text Area-->
+    <section>
+        <fieldset>
+
+            <legend>
+                <h2>Interesse</h2>
+            </legend>
+
+            <textarea name="descricao" rows="10" cols="100" wrap="hard"
+                placeholder="Digite aqui seu motivo pelo interesse ..."></textarea>
+        </fieldset>
+    </section>
+
+    <!--Outros 4chekbox + 3radio-->
+    <section>
+        <fieldset>
+            <legend>
+                <h2>Outros</h2>
+            </legend>
+
+            <fieldset>
+                <legend>
+                    <h4>É necessário ter carteira de habilitação ? </h4>
+                </legend>
+                <input type="checkbox" name="servico" value="servico1">Não
+                <input type="checkbox" name="servico" value="servico2">Apenas um cavalo
+                <input type="checkbox" name="servico" value="servico3">Carro
+                <input type="checkbox" name="servico" value="servico4">Moto
+            </fieldset>
+            <br>
+            <fieldset>
+                <legend>
+                    <h4>É necessário experiência ?</h4>
+                </legend>
+                <input type="radio" name="xp" value="nao" checked>Não
+                <br>
+                <input type="radio" name="xp" value="quase">Só um breve conhecimento na área
+                <br>
+                <input type="radio" name="xp" value="sim">Sim
+                <br>
+            </fieldset>
+        </fieldset>
+    </section>
+    <br>
+
+    <!--Botao-->
+    <button>Enviar</button>
+
+</form>
+<br>
+<hr>
+
+</html>

@@ -1,0 +1,28 @@
+body {
+    background-image: url("../images/background.jpg");
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-size: cover;
+}
+
+​​​​​​​​form {
+    margin-top: 15%;
+    margin-left: 35%;
+    width: 30%;
+    padding: 10px;
+    border: 1px solid lightgray;
+    box-shadow: 0 0 5px lightgray;
+    border-radius: 15px;
+    background-color: white;
+}
+
+div {
+    padding: 10px
+}
+
+​​​​​​​​ button {
+    border-radius: 0px;
+}
+
+span {
+    color: red
+}

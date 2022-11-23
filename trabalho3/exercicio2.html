@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio 2</title>
+    <link rel="stylesheet" href="css/exercicio2.css">
+
+
+<body>
+    <div>
+        <!--Label insere-->
+        <label for="interesse">Interesse: </label>
+        <input type="text" id="interesse" name="interesse">
+
+        <!--Lista-->
+        <!--Filme e Desenho não da para remover !-->
+        <ol>
+            <li>Filme</li>
+            <li>Desenho</li>
+        </ol>
+    </div>
+
+
+    <script>
+        window.onload = function () {
+            const campoInterese = document.querySelector("#interesse");
+            campoInterese.addEventListener("keyup", e => {
+                if (e.key === "Enter") //Condicional de apertar "ENTER"
+                    addInteresse();//Adiciona na func. addInteresse 
+            });
+        }
+
+        function addInteresse() {
+            const campoInterese = document.querySelector("#interesse");//retorna o primeiro no da arvore DOM que atende o id interesse
+            const listaInteresse = document.querySelector("ol");//retorna o primeiro nó da arvore DOM que atende o elemento de lista ordenada
+
+            const novoLi = document.createElement("li");//cria nova lista
+            const novoSpan = document.createElement("span");//cria novo span
+            const novoBotao = document.createElement("button");//cria novo botão "X"
+
+
+            novoSpan.textContent = campoInterese.value;//novo botao recebe o conteudo de campoInteresse
+            novoBotao.textContent = '❌'; //botao recebe "X"
+
+
+            //acrescenta no final do filho
+            novoLi.appendChild(novoSpan);
+            novoLi.appendChild(novoBotao);
+            listaInteresse.appendChild(novoLi);
+
+
+            novoBotao.onclick = function () {
+                novoLi.remove();//remove a nova lista
+            }
+
+            campoInterese = '';
+        }
+    </script>
+</body>
+
+</html>

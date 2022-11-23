@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Exercicio4</title>
+    <link rel="stylesheet" href="css/exercicio4.css">
+</head> 
+
+<main>
+    <div>
+        <form name="formCadastro" method="POST">
+            <h3>Cadastro de Usuário</h3>
+             
+            <div>
+                <label for="usuario">Usuário:</label>
+                <br>
+                <input type="text" id="usuario" name="usuario">
+                <span></span>
+            </div>
+             
+            <div>
+                <label for="senha">Senha:</label>
+                <br>
+                <input type="password" id="senha" name="senha">
+                <span></span>
+            </div>
+             
+            <div>
+                <label for="email">Email:</label>
+                <br>
+                <input type="email" id="email" name="email">
+                <span></span>
+            </div>
+            <br>
+            <button>Cadastrar</button>
+        </form>
+    </div>
+     
+    <script>
+        window.onload = function () {
+            document.forms.formCadastro.onsubmit = validaForm;
+            //Função para tratar o onsubmit
+        }
+
+        function validaForm(e) {//função que trata o evento onsubmit
+            let form = e.target;//pega o objeto do formulario
+            let formValido = true; //formValido inicia como True
+
+            const spanUsuario = form.usuario.nextElementSibling;//spanUsuario pega o proximo no irmao do tipo elemento usuario
+            const spanSenha = form.senha.nextElementSibling;//spanSenha pega o proximo no irmao do tipo elemento senha
+            const spanEmail = form.email.nextElementSibling;//spanEmail pega o proximo no irmao do tipo elemento email
+
+            spanUsuario.textContent = "";//conteúdo do texto(textContent) recebe vazio
+            spanSenha.textContent = "";//conteúdo do texto(textContent) recebe vazio
+            spanEmail.textContent = "";//conteúdo do texto(textContent) recebe vazio
+
+            if (form.usuario.value === "") {//verifica se  o conteúdo está vazio
+                spanUsuario.textContent = "O Usuário deve ser preenchido neste campo";//Mensagem caso o campo esteja vazio
+                formValido = false;//formValido recebe falso se conteúdo vazio
+            }
+
+            if (form.senha.value === "") {//verifica se  o conteúdo está vazio
+                spanSenha.textContent = "A Senha deve ser preenchida neste campo";//Mensagem caso o campo esteja vazio
+                formValido = false;//formValido recebe falso se conteúdo vazio
+            }
+
+            if (form.email.value === "") {//verifica se  o conteúdo está vazio
+                spanEmail.textContent = "O Email deve ser preenchido neste campo";//Mensagem caso o campo esteja vazio
+                formValido = false;//formValido recebe falso se conteúdo vazio
+            }
+
+            return formValido;//retorna o objeto formValido no caso pode ser True ou False
+        }
+    </script>
+</main>
+
+</html>
